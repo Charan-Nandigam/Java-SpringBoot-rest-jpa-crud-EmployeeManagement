@@ -1,0 +1,13 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+          <a *ngIf="loginService.isUserLoggedIn()" routerLink="employees" class="nav-link" routerLinkActive="active">Employee List</a>
+      </li>
+      <li class="nav-item">
+          <a *ngIf="loginService.isUserLoggedIn()" routerLink="newemp" class="nav-link" routerLinkActive="active">Add Employee</a>
+      </li>
+
+      <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
+      <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link">LogOut</a></li>
+    </ul>
+  </nav>
